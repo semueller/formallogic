@@ -20,7 +20,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{multicol}
-\usepackage{ngerman}
+%\usepackage{ngerman}
 \usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
 citecolor=blue, urlcolor=blue]{hyperref}
 
@@ -52,6 +52,33 @@ citecolor=blue, urlcolor=blue]{hyperref}
 
 
 \section*{Exercise 1: (Elves and Vampires)}
+
+Leading Thoughts: We know, that any given person A either a vampire, always lying, or an elf, always telling the truth, is. As convention, we will give persons truth-values, just like atomic formulae, where elfs will be true (''1'') and vampires will be false (''0'').\\
+Any statement F given by person A is either true and A is an elf, or it is false and A is an vampire. Thus, we can establish a new ''meta''-statement G, which must always be true: $G = (A \land F) \oplus ( \neg A \land \neg F )$. 
+
+\subsection*{1.A}
+
+We model F as follows:\\
+$F = \neg A \lor \neg B$ \\
+So the truth table looks like this:\\\\
+\begin{tabular}{  l | l | l | l | l}
+	A B & $F$ & $A \land F $ & $\neg A \land \neg F$ & $G$ \\ \hline
+	0 0 & 1 & 0 & 0 & 0 \\
+	0 1 & 1 & 0 & 0 & 0 \\
+	1 0 & 1 & 1 & 0 & 1 \\
+	1 1 & 0 & 0 & 0 & 0 \\
+\end{tabular} \\\\
+Thus our meta-statement G holds only true for A=1 (elf), B=0 (vampire).
+
+\subsection*{1.B}
+
+\subsection*{1.C}
+
+\subsection*{1.D}
+
+\subsection*{1.E}
+
+\subsection*{1.F}
 
 
 \section*{Exercise 2: (Borromean formulas)}
