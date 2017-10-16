@@ -86,11 +86,25 @@ Thus our meta-statement G holds true for $B=1$ (elf). A is ambig, meaning it cou
 
 \subsection*{1.C}
 
+This is a special case of 1.B, where we could just assume $B=0$. Our meta-statement G is not satisfiable in this case, meaning the statement cannot be made by elfs or vampires.
+
 \subsection*{1.D}
 
 \subsection*{1.E}
 
 \subsection*{1.F}
+
+We model F as follows:\\
+$F = \neg A \land B$ \\
+So the truth table looks like this:\\\\
+\begin{tabular}{  l | l | l | l | l}
+	A B & $F$ & $A \land F $ & $\neg A \land \neg F$ & $G$ \\ \hline
+	0 0 & 0 & 0 & 1 & 1 \\
+	0 1 & 1 & 0 & 0 & 0 \\
+	1 0 & 0 & 0 & 0 & 0 \\
+	1 1 & 0 & 0 & 0 & 0 \\
+\end{tabular} \\\\
+Thus our meta-statement G holds true for $A=B=0$ (vampire).
 
 
 \section*{Exercise 2: (Borromean formulas)}
