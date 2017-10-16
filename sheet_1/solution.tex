@@ -96,16 +96,16 @@ $F_2 = (\neg A \land \neg B \land C) \lor (\neg A \land B \land \neg C) \lor (A 
 So the truth table looks like this:\\\\
 \begin{tabular}{  l | l | l | l | l | l | l | l | l | l}
 	A B C & $F_1$ & $A \land F_1 $ & $\neg A \land \neg F_1$ & $G_1$ & $F_2$ & $B \land F_2 $ & $\neg B \land \neg F_2$ & $G_2$ & G\\ \hline
-	0 0 0 & 1 & 0 & 0 & 0 & 0 &  &  &  &  \\
-	0 1 0 & 0 & 0 & 1 & 1 & 1 &  &  &  &  \\
-	1 0 0 & 0 & 0 & 0 & 0 & 1 &  &  &  &  \\
-	1 1 0 & 0 & 0 & 0 & 0 & 0 &  &  &  &  \\
-	0 0 1 & 0 & 0 & 1 & 1 & 1 &  &  &  &  \\
-	0 1 1 & 0 & 0 & 1 & 1 & 0 &  &  &  &  \\
-	1 0 1 & 0 & 0 & 0 & 0 & 0 &  &  &  &  \\
-	1 1 1 & 0 & 0 & 0 & 0 & 0 &  &  &  &  \\
+	0 0 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 \\
+	0 1 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 1 \\
+	1 0 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+	1 1 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+	0 0 1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+	0 1 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+	1 0 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 \\
+	1 1 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \end{tabular} \\\\
-Thus our meta-statement G holds true for $A=0$ (vampire), $B=C=1$ (elf).
+Thus our meta-statement G holds true for $A=C=0$ (vampire), $B=1$ (elf).
 
 \subsection*{1.E}
 We model our F's as follows:\\
