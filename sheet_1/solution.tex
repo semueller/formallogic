@@ -68,9 +68,21 @@ So the truth table looks like this:\\\\
 	1 0 & 1 & 1 & 0 & 1 \\
 	1 1 & 0 & 0 & 0 & 0 \\
 \end{tabular} \\\\
-Thus our meta-statement G holds only true for A=1 (elf), B=0 (vampire).
+Thus our meta-statement G holds only true for $A=1$ (elf), $B=0$ (vampire).
 
 \subsection*{1.B}
+
+We model F as follows:\\
+$F = \neg A \oplus B$ \\
+So the truth table looks like this:\\\\
+\begin{tabular}{  l | l | l | l | l}
+	A B & $F$ & $A \land F $ & $\neg A \land \neg F$ & $G$ \\ \hline
+	0 0 & 1 & 0 & 0 & 0 \\
+	0 1 & 0 & 0 & 1 & 1 \\
+	1 0 & 0 & 0 & 0 & 0 \\
+	1 1 & 1 & 1 & 0 & 1 \\
+\end{tabular} \\\\
+Thus our meta-statement G holds true for $B=1$ (elf). A is ambig, meaning it could either be an elf or a vampire.
 
 \subsection*{1.C}
 
