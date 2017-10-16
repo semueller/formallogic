@@ -1,0 +1,113 @@
+
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\DeclareMathOperator{\rng}{Rng}
+\DeclareMathOperator{\dom}{Dom}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cont}{\subseteq}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax% just so we can load this and rsfs
+\usepackage[scr]{rsfso}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{ngerman}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
+citecolor=blue, urlcolor=blue]{hyperref}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\ddx}{\frac{d}{dx}}
+\newcommand{\dfdx}{\frac{df}{dx}}
+\newcommand{\ddxp}[1]{\frac{d}{dx}\left( #1 \right)}
+\newcommand{\dydx}{\frac{dy}{dx}}
+\let\ds\displaystyle
+\newcommand{\intx}[1]{\int #1 \, dx}
+\newcommand{\intt}[1]{\int #1 \, dt}
+\newcommand{\defint}[3]{\int_{#1}^{#2} #3 \, dx}
+\newcommand{\imp}{\Rightarrow}
+\newcommand{\un}{\cup}
+\newcommand{\inter}{\cap}
+\newcommand{\ps}{\mathscr{P}}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newtheorem*{sol}{Solution}
+\newtheorem*{claim}{Claim}
+\newtheorem{problem}{Problem}
+\begin{document}
+ 
+
+\lhead{Formal Logic Sheet 1}
+\chead{Robert Feldhans, Sebastian Mueller}
+\rhead{\today}
+
+
+\section*{Exercise 1: (Elves and Vampires)}
+
+
+\section*{Exercise 2: (Borromean formulas)}
+
+Choose \\
+$ 
+A_1 = A \land B \\
+A_2 = B \land C \\
+A_3 = \neg C \lor \neg A 
+$ \\ \\
+- $
+	A_1 \land A_2 = A \land B \land B \land C = A \land B \land C $ 
+	satisfiable for A = B = C = 1 \\
+- $	A_1 \land A_3 = (A \land B) \land (\neg C \lor \neg A) = B \land ( (A \land \neg C) \lor \underset{unsatisfiable}{(A \land \neg A)) } = B \land A \land \neg C
+	$ \\ satisfiable for A = B = 1, C = 0 \\
+- $A_2 \land A_3 =$ similar to $A_1 \land A2
+$, now choose B = C = 1, A = 0 to satisfy formula \\
+- $A_1 \land A_2 \land A_3 = A \land B \land B \land C \land (\neg C \lor \neg A) = A \land B \land (\underset{unsatisfiable}{(\neg C \land C)}\lor(\neg A \land \neg C)) = \underset{unsatisfiable}{A \land \neg A} \land B \land C = 0
+$ , for all possible inputs \\
+
+\section*{Exercise 3: (XOR)}
+
+\begin{tabular}{  l | l | l }
+	A B & $ A \oplus B = 1 $ iff $A \neq B$ & $ (A \lor B) \land \neg(A \lor B) $ \\ \hline
+	0 0 & 0 & 0 \\
+	0 1 & 1 & 1 \\
+	1 0 & 1 & 1 \\
+	1 1 & 0 & 0 \\
+\end{tabular} 
+\\
+
+The truth table shows that both formulas evaluate to the same value for all possible inputs, hence they are equivalent.
+
+\section*{Exercise 4: (Truth value tables)}
+$
+F_1 =  \neg (A \implies B) = \neg (\neg A \lor B) = A \land \neg B   \\ \\
+ F_2 = \neg (\neg A \lor \neg (\neg B \lor \neg A)) = A \land (\neg B \lor \neg A) = (A \land \neg B) \lor \underset{= unsatisfiable}{(A \land \neg A)} = A \land \neg B \\
+F_3 = (A \land B) \land( \neg B \lor C) = \underset{unsatisfiable}{(A \land B \land \neg B)} \lor (A \land B \land C) = A \land B \land C \\
+F_4 = A \Leftrightarrow (B \Leftrightarrow C) \\
+$ \\
+Evaluated in a truth table: \\ \\
+\begin{tabular}{  l | l | l | l | l}
+	C A B & $F_1$ & $F_2$ & $F_3$ & $F_4$ \\ 
+	\hline
+	0 0 0 & 0 & 0 & 0 & 1 \\
+	0 0 1 & 0 & 0 & 0 & 0 \\
+	0 1 0 & 1 & 1 & 0 & 0 \\
+	0 1 1 & 0 & 0 & 0 & 0 \\
+	1 0 0 & - & - & 0 & 0 \\
+	1 0 1 & - & - & 0 & 0 \\
+	1 1 0 & - & - & 0 & 0 \\
+	1 1 1 & - & - & 1 & 1 \\
+\end{tabular}
+\\
+
+From the lecture we know that two Formulas are equivalent if their truth tables are equivalent, hence $F_1$ and $F_2$ are equivalent, $F_3$ and $F_4$ are not, $F_1$ and $F_3$ aren't either.
+%comment
+%ANARCHY
+\end{document}
