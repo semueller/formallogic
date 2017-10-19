@@ -54,10 +54,61 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \section*{Exercise 5:  (Laws of Logic)}
 
 \subsection*{1.}
+$F \land (F \lor G) \equiv F$\\
+$\Leftrightarrow (F \land F) \lor (F \land G) \equiv F$ \hspace*{2cm} see part 2\\
+$\Leftrightarrow F \lor (F \land G) \equiv F$\\\\
+So the truth table for both formulae looks like this:\\\\
+\begin{tabular}{  l | l | l }
+	F G & $F \lor G$ & $F \land (F \lor G) $  \\ \hline
+	0 0 & 0 & 0  \\
+	0 1 & 1 & 0  \\
+	1 0 & 1 & 1  \\
+	1 1 & 1 & 1  \\
+\end{tabular}
 
 \subsection*{2.}
+$F \land (G \lor H) \equiv (F \land G) \lor (F \land H)$\\
+\begin{tabular}{  l | l | l | l | l | l}
+	F G H & $G \lor H$ & $F \land (G \lor H) $ & $F \land G$ & $F \land H$ & $(F \land G) \lor (F \land H)$ \\ \hline
+	0 0 0 & 0 & 0 & 0 & 0 & 0\\
+	0 0 1 & 1 & 0 & 0 & 0 & 0\\
+	0 1 0 & 1 & 0 & 0 & 0 & 0\\
+	0 1 1 & 1 & 0 & 0 & 0 & 0\\
+	1 0 0 & 0 & 0 & 0 & 0 & 0\\
+	1 0 1 & 1 & 1 & 0 & 1 & 1\\
+	1 1 0 & 1 & 1 & 1 & 0 & 1\\
+	1 1 1 & 1 & 1 & 1 & 1 & 1\\
+\end{tabular}\\\\\\
+$F \lor (G \land H) \equiv (F \lor G) \land (F \lor H)$\\
+\begin{tabular}{  l | l | l | l | l | l}
+	F G H & $G \land H$ & $F \lor (G \land H) $ & $F \lor G$ & $F \lor H$ & $(F \lor G) \land (F \lor H)$ \\ \hline
+	0 0 0 & 0 & 0 & 0 & 0 & 0\\
+	0 0 1 & 0 & 0 & 0 & 1 & 0\\
+	0 1 0 & 0 & 0 & 1 & 0 & 0\\
+	0 1 1 & 1 & 1 & 1 & 1 & 1\\
+	1 0 0 & 0 & 1 & 1 & 1 & 1\\
+	1 0 1 & 0 & 1 & 1 & 1 & 1\\
+	1 1 0 & 0 & 1 & 1 & 1 & 1\\
+	1 1 1 & 1 & 1 & 1 & 1 & 1\\
+\end{tabular}
 
 \subsection*{3.}
+$\neg (F \land G) \equiv \neg F \lor \neg G$\\
+\begin{tabular}{  l | l | l }
+	F G & $F \land G$ & $\neg F \lor \neg G$  \\ \hline
+	0 0 & 0 & 1  \\
+	0 1 & 0 & 1  \\
+	1 0 & 0 & 1  \\
+	1 1 & 1 & 0  \\
+\end{tabular}\\\\
+$\neg (F \lor G) \equiv \neg F \land \neg G$\\
+\begin{tabular}{  l | l | l }
+	F G & $F \lor G$ & $\neg F \land \neg G$  \\ \hline
+	0 0 & 0 & 1 \\
+	0 1 & 1 & 0  \\
+	1 0 & 1 & 0  \\
+	1 1 & 1 & 0  \\
+\end{tabular}
 
 \section*{Exercise 6: (Two proofs)}
 
