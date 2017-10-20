@@ -46,7 +46,7 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \begin{document}
  
 
-\lhead{Formal Logic Sheet X}
+\lhead{Formal Logic Sheet 2}
 \chead{Robert Feldhans, Sebastian Mueller}
 \rhead{\today}
 
@@ -112,7 +112,56 @@ $\neg (F \lor G) \equiv \neg F \land \neg G$\\
 
 \section*{Exercise 6: (Two proofs)}
 
+Show $F_1 = (A \lor \lnot (B \land A)) \land (C \lor (D \lor C)) = C \lor D = F_2$\\ \\
+(a) by truth table\\
+\begin{tabular}{  l | l | l | l | l | l | l  }
+	A B C D & $\lnot (B \land A)$ & $A \lor \lnot (B \land A) = G_1$ & $D \lor C$ & $C \lor (D \lor C) = G_2$ & $F_1 = G_1 \land G_2$ & $F_2 = C \lor D$ \\ \hline
+	0 0 0 0 & 1 &1 &0 &0 &0 &0  \\
+	0 0 0 1 & 1 &1 &1 &1 &1 &1  \\
+	0 0 1 0 & 1 &1 &1 &1 &1 &1  \\
+	0 0 1 1 & 1 &1 &1 &1 &1 &1  \\
+	0 1 0 0 & 1 &1 &0 &0 &0 &0  \\
+	0 1 0 1 & 1 &1 &1 &1 &1 &1  \\
+	0 1 1 0 & 1 &1 &1 &1 &1 &1  \\
+	0 1 1 1 & 1 &1 &1 &1 &1 &1  \\
+	1 0 0 0 & 1 &1 &0 &0 &0 &0  \\
+	1 0 0 1 & 1 &1 &1 &1 &1 &1  \\
+	1 0 1 0 & 1 &1 &1 &1 &1 &1  \\
+	1 0 1 1 & 1 &1 &1 &1 &1 &1  \\
+	1 1 0 0 & 0 &1 &0 &0 &0 &0  \\
+	1 1 0 1 & 0 &1 &1 &1 &1 &1  \\
+	1 1 1 0 & 0 &1 &1 &1 &1 &1  \\
+	1 1 1 1 & 0 &1 &1 &1 &1 &1  \\
+	
+\end{tabular}
+\\ \\
+(b) by transformation \\
+	$F_1 = (A \lor \lnot (B \land A)) \land (C \lor (D \lor C)) \\
+	\overset{de Morgan}{=} ( A \lor ( \lnot B \lor \lnot A)) \land (C \lor (D \lor C)) \\
+	\overset{Assoc.}{=} ( A \lor \lnot B \lor \lnot A) \land (C \lor D \lor C) \\
+	\overset{Idemp.}{=} \underset{Tautology}{( A \lor \lnot B \lor \lnot A)} \land (C \lor D) \\
+	 = C \lor D \ = F_2$ 
+
 \section*{Exercise 7: (CNF and DNF)}
+$ F = (\lnot A \implies B) \lor ((A \lor \lnot C) \Leftrightarrow B)\\
+ = (\lnot\lnot A \lor B) \lor (((A \land \lnot C)\land B) \lor (\lnot(A\land \lnot C)\land \lnot B)) $\\ \\ 
+1. \\
+ Replace Double negations\\
+ $\Leftrightarrow (A \lor B) \lor (((A \land \lnot C)\land B) \lor (\lnot(A\land \lnot C)\land \lnot B))$\\ \\
+ Apply De Morgan's rules\\
+ $\Leftrightarrow A \lor B \lor (A \land \lnot C \land B) \lor ((\lnot A \lor C) \land \lnot B)$\\ \\
+2. \\
+DNF\\
+$\Leftrightarrow A \lor B \lor (A \land \lnot C \land B) \lor  (\lnot A \land B) \lor (C \land \lnot B)$ \\ \\
+CNF\\
+ $\Leftrightarrow A \lor B \lor 
+ (((A \land \lnot C \land B) \lor (\lnot A \lor C)) \land (\lnot B \lor (A \land \lnot C \land B)))$\\
+ $\Leftrightarrow A \lor B \lor 
+ (((\underset{Tautology}{A \lor (\lnot A \lor C)}) \land (B \lor (\lnot A \lor C) \land \underset{Tautology}{(\lnot C \lor (\lnot A \lor C))} \land ((\lnot B \lor A) \land (\lnot B \lor C) \land (\underset{Tautology}{\lnot B \lor B})))$\\
+ $\Leftrightarrow A \lor B \lor 
+ ((B \lor \lnot A \lor C) \land (\lnot B \lor A) \land (\lnot B \lor C))$\\
+$\Leftrightarrow A \lor ((B \lor B \lor \lnot A \lor C) \land (\underset{Tautology}{B \lor \lnot B \lor A)} \land (\underset{Tautology}{B \lor \lnot B \lor C}))$\\
+$\Leftrightarrow \underset{Tautology}{A \lor (B \lor B \lor \lnot A \lor C)} = 1$\\ \\
 
 \section*{Exercise 8: (Switch and and or)}
 
