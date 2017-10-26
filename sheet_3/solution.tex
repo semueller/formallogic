@@ -69,13 +69,19 @@ In the next step we would mark the $(A \land B \land D \Rightarrow 0)$ literal, 
 
 \subsection*{a.}
 
-\subsection*{b}
+\subsection*{b.}
+
+Horn formulas (in CNF) in which each disjunctive clause contains at least one $\neg$ have only literals of the form $(X_1 \land X_2 \land ... \land X_n \Rightarrow 0)$ and $(X_1 \land X_2 \land ...  \land X_n \Rightarrow X_{n+1})$, but none of the form $(1 \Rightarrow X)$, because the presence of at least one $\neg$ would turn them to the second form.\\
+When now using the algorithm 1.3 to determine the satisfiability of those formulas, in the first step no atomic formula of the form $(1 \Rightarrow X)$ is present and such will not be marked. This results to the loop in the second step not executing at all. So step three is executed and the algorithm returns the formula as satisfiable.
 
 \section*{Exercise 11:  ($\neg$ and $\Rightarrow$ suffice, but $\lor$, $\land$ and $\Rightarrow$ don’t)}
 
 \subsection*{a.}
 
-\subsection*{b}
+\subsection*{b.}
+
+Proof by giving such a formula:\\
+$F = \neg A \land \neg B$
 
 \section*{Exercise 12: (Infinitely many formulas)}
 
