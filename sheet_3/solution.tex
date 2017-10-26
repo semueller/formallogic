@@ -51,19 +51,33 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \rhead{\today}
 
 
-\section*{Exercise 5:  (Laws of Logic)}
+\section*{Exercise 9:  (Horn formula algorithm)}
 
-\subsection*{1.}
+First, we write the formula in the implication-form, so \\
+$F = (\neg A \lor \neg B \lor \neg D) \land \neg E \land (\neg C \lor A) \land C \land B \land (\neg G \lor D) \land G$\\
+becomes:\\
+$F = (A \land B \land D \Rightarrow 0) \land (0 \Rightarrow E) \land (C \Rightarrow A) \land (1 \Rightarrow C) \land (1 \Rightarrow B) \land (G \Rightarrow D) \land (1 \Rightarrow G)$\\\\
+Then we start marking all literals of the form $(1 \Rightarrow X)$:\\
+$F = (A \land B \land D \Rightarrow 0) \land (0 \Rightarrow E) \land (C \Rightarrow A) \land \underline{(1 \Rightarrow C)} \land \underline{(1 \Rightarrow B)} \land (G \Rightarrow D) \land \underline{(1 \Rightarrow G)}$\\\\
+Now we start with the loop part of the algorithm: \\
+$F = (A \land B \land D \Rightarrow 0) \land (0 \Rightarrow E) \land \underline{(C \Rightarrow A)} \land \underline{(1 \Rightarrow C)} \land \underline{(1 \Rightarrow B)} \land (G \Rightarrow D) \land \underline{(1 \Rightarrow G)}$\\\\
+$F = (A \land B \land D \Rightarrow 0) \land (0 \Rightarrow E) \land \underline{(C \Rightarrow A)} \land \underline{(1 \Rightarrow C)} \land \underline{(1 \Rightarrow B)} \land \underline{(G \Rightarrow D)} \land \underline{(1 \Rightarrow G)}$\\\\
+In the next step we would mark the $(A \land B \land D \Rightarrow 0)$ literal, but it implies 0, so the formula is non satisfiable.
 
-\subsection*{2.}
 
-\subsection*{3.}
+\section*{Exercise 10: (Not a Horn formula)}
 
-\section*{Exercise 6: (Two proofs)}
+\subsection*{a.}
 
-\section*{Exercise 7: (CNF and DNF)}
+\subsection*{b}
 
-\section*{Exercise 8: (Switch and and or)}
+\section*{Exercise 11:  ($\neg$ and $\Rightarrow$ suffice, but $\lor$, $\land$ and $\Rightarrow$ don’t)}
+
+\subsection*{a.}
+
+\subsection*{b}
+
+\section*{Exercise 12: (Infinitely many formulas)}
 
 %ANARCHY
 \end{document}
