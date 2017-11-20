@@ -55,11 +55,17 @@ citecolor=blue, urlcolor=blue]{hyperref}
 
 \subsection*{a}
 
-Choose for example $x=3$, $y=5$, $y=4$\\
+Choose for example $x=3$, $y=5$, $z=4$\\
 $\Rightarrow$ $x<z$, $z<y$, $x<z$, $\lnot (z < x)$\\
 This holds true, so this is a model for F.
 
 \subsection*{b}
+$P=\{(n,n+1)| n \in \N \} \\
+(x,y) = (x,x+1), \\
+(z,y)=(z,x+1) \Rightarrow z=x, \\
+(x,z)=(x,x+1) \Rightarrow (z=x)\\
+(z=x)\land(z=x+1)$ unsatisfiable\\
+So this is no model of F.
 
 
 
@@ -74,10 +80,18 @@ In conclusion, this cannot be a model for F.
 \subsection*{d}
 
 Choose for example $y = \{1,2,3\}$, $z=\{1,2\}$, $x=\{1\}$\\
-$\Rightarrow$ $x \subseteq z$, $z \subseteq y$, $x \subseteq z$, $\lnot (z \subseteq x)$\\
+$\Rightarrow$ $x \subseteq y$, $z \subseteq y$, $x \subseteq z$, $\lnot (z \subseteq x)$\\
 This holds true, so this is a model for F.
 
 \section*{Exercise 18: (Models and non-models)}
+$F=\forall x \exists y P(x,y,f(z))$\\
+\subsection*{Terms}
+$x,y,z,f(z)$\\
+\subsection*{Partial Formulas}
+$F,\exists y P(x,y,f(z)), \forall x P(x,y,f(z)), P(x,y,f(z)) $
+
+\subsection*{Matrix}
+$P(x,y,f(z))$
 
 \subsection*{Structures that are not model for F:}
 
@@ -92,10 +106,6 @@ $U_A = \R$, $P^A=\{(x,y,z | x,y,z \in \R, y^2<x^2, y \neq x)\}$\\
 \section*{Exercise 19: (Reflexive, symmetric, transitive)}
 
 \section*{Exercise 20: (Small universes)}
-
-\subsection*{a}
-
-\subsection*{b}
 
 %ANARCHY
 \end{document}
