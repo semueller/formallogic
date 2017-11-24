@@ -71,11 +71,23 @@ Both structures hold individually, but not when combined.
 
 We model our this Problem as follows: As convention, we will give persons truth-values, just like atomic formulae, where elfs will be true (”1”) and vampires will be false (”0”). Similarily, we will give eye colors truth values, where blue eyes will be true (”1”) and brown eyes will be false (”0”).\\
 Every person C has an eye color E and a parent P. Thus:\\
-$F_1= (\lnot E \land \lnot P) \Rightarrow \lnot C$\\
+\indent$F_1= (\lnot E \land \lnot P) \Rightarrow \lnot C$\\
 Furthermore:\\
-$F_2= P \Rightarrow E$\\
+\indent$F_2= P \Rightarrow E$\\
 And lastly:\\
-$F_3=\lnot E \Rightarrow \lnot C$
+\indent$F_3=\lnot E \Rightarrow \lnot C$\\\\
+We will now bring $F_1 \land F_2 \land \lnot F_3$ in CNF to show unsatisfiabilityby resolution:\\\indent
+$F_1 \land F_2 \land \lnot F_3$\\\indent
+$= ( (\lnot E \land \lnot P) \Rightarrow \lnot C) \land (P \Rightarrow E) \land (\lnot E \Rightarrow \lnot C) $\\\indent
+$= (\lnot(\lnot E \land \lnot P)\lor \lnot C )\land (\lnot P \lor E) \land \lnot(E \lor \lnot C)$\\\indent
+$= (E \lor P \lor \lnot C) \land (\lnot P \lor E) \land \lnot E \land C$\\\\
+Resolution:\\$\indent
+Res^1(F_1 \land F_2 \land F_3) = \{ \{E, P, \lnot C \},\{\lnot P, E\},\{\lnot E\},\{C\} \}\\\indent
+Res^2(F_1 \land F_2 \land F_3) = Res^1(F_1 \land F_2 \land F_3) \cup \{\{E, \lnot C\},\{\lnot P\},\{E,P\} \}  \\\indent
+Res^3(F_1 \land F_2 \land F_3) = Res^2(F_1 \land F_2 \land F_3) \cup \{ \{E\},\{\square \} \} \\ \\
+$
+$Res^3(F_1 \land F_2 \land F_3)$ contains $\square$ and by Theorem 1.9 we now can conclude that $F_1 \land F_2 \land F_3$ is unsatisfiable.
+
 
 \section*{Exercise 24: (Skolem normal form)}
 
