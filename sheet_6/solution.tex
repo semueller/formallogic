@@ -88,8 +88,30 @@ Res^3(F_1 \land F_2 \land F_3) = Res^2(F_1 \land F_2 \land F_3) \cup \{ \{E\},\{
 $
 $Res^3(F_1 \land F_2 \land F_3)$ contains $\square$ and by Theorem 1.9 we now can conclude that $F_1 \land F_2 \land F_3$ is unsatisfiable.
 
-
 \section*{Exercise 24: (Skolem normal form)}
+\subsection*{1)}
+$
+F = \lnot \forall w P(a,w) \lor \forall x\exists y \forall z Q(f(x),y) \\
+\Leftrightarrow F = \exists w \lnot P(a,w) \lor \forall x\exists y \forall z Q(f(x),y) \\
+\Leftrightarrow F = \exists w \forall x\exists y \forall z (\lnot P(a,w) \lor  Q(f(x),y)) \\
+\Leftrightarrow F = \forall x\forall z (\lnot P(a,w') \lor  Q(f(x),y')) \\$
+\subsection*{2)}
+$
+G =(\lnot \exists x(P(x, z) \lor \forall y Q(x, f(y)))) \lor \forall y P(g(x, y), z) \\
+\Leftrightarrow G =(\forall x\lnot (P(x, z) \lor \forall y Q(x, f(y)))) \lor \forall q P(g(p, q), z) \\
+\Leftrightarrow G =(\forall x (\lnot P(x, z) \land \lnot \forall y Q(x, f(y)))) \lor \forall q P(g(p, q), z) \\
+\Leftrightarrow G =(\forall x (\lnot P(x, z) \land \exists y \lnot Q(x, f(y)))) \lor \forall q P(g(p, q), z) \\
+\Leftrightarrow G =\forall x \exists y \forall q( (\lnot P(x, z) \land  \lnot Q(x, f(y))) \lor  P(g(p, q), z)) \\
+\Leftrightarrow G =\forall x \forall q( (\lnot P(x, z) \land  \lnot Q(x, f(y'))) \lor  P(g(p, q), z)) \\
+$
+\subsection*{3)}
+$
+H = \forall z\exists y(P(x,g(y),z) \lor \lnot \forall x Q(x)) \land \lnot \forall z \exists x \lnot R(f(x,z),z) \\
+\Leftrightarrow H = \forall z\exists y(P(x,g(y),z) \lor \lnot \forall s Q(s)) \land \lnot \forall v \exists w \lnot R(f(w,v),v) \\
+\Leftrightarrow H = \forall z\exists y \exists s(P(x,g(y),z) \lor \lnot Q(s)) \land \exists v \forall w R(f(w,v),v) \\
+\Leftrightarrow H = \forall z\exists y \exists s \exists v \forall w ((P(x,g(y),z) \lor \lnot Q(s)) \land R(f(w,v),v)) \\
+\Leftrightarrow H = \forall z\forall w ((P(x,g(y'),z) \lor \lnot Q(s')) \land R(f(w,v'),v')) \\
+$
 
 %ANARCHY
 \end{document}
