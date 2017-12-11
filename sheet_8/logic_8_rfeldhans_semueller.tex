@@ -161,5 +161,15 @@ This plane can easily be infinitely extended in any direction.
 
 \subsection*{Right set of tiles}
 
+We will show that it is not possible to lie a plane using this tileset by showing that if tiles 2, 3 or 4 are lied down they ultimately require a tile 1 to be laid and that lying of tile 1 makes any indefinite plane impossible, thus violating the Wang condition.
+
+If tile 2 is laid, tile 4 has to be laid on top of it to complete the red edge. If tile 3 or 4 are laid, tile 1 has to be placed to the right of them, to complete the green edge. 
+
+However, if tile 1 is laid, it needs to be laid to the right of it again, because it is the only tile which has a green edge to the left. Consider now the tile below tile 1: It needs to have a blue edge on top, thus it must either be tile 3 or tile 4. Both of them require tile 1 to the right of them, to complete their right green edge. This way the tile which shares the lower right corner with/ is diagonal to the original laid tile 1 has also to be tile 1. But on top of that tile (thus to the right of the original tile 1) has to be another tile 1, which means that a red upper edge would border an blue lower edge, which would violate the condition of the Wang tiles.\\
+Illustration:\\
+1 1 1 ...\\
+3 1 1 1 ...\\
+
+
 %ANARCHY
 \end{document}
