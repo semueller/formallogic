@@ -51,19 +51,102 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \rhead{\today}
 
 
-\section*{Exercise 5:  (Laws of Logic)}
+\section*{Exercise 29:  (Insane Vampires)}
 
-\subsection*{1.}
+\section*{Exercise 30: (Infinite Models)}
+$ F = \forall x P(x,f(x)) \land \forall y \lnot P(y,y) \land \forall x \forall y \forall z ((P(x,y)\land P(y,z)) \Rightarrow P(x,z))$
+\subsection*{a}
+Find a model that satisfies F\\
+$U^F = \Z\\
+P^F(x,y) = \{ (x,y) | x < y\}\\
+f(x): x \rightarrow x+1$
 
-\subsection*{2.}
+\section*{Exercise 31: (Undecidable Problem I)}
+\subsection*{a}
+\[
+A =\begin{bmatrix}
+0 1 0\\
+  0  
+\end{bmatrix}, 
+B = \begin{bmatrix}
+  1\\
+1 1 0  
+\end{bmatrix},
+C = \begin{bmatrix}
+1 0\\
+0 1
+\end{bmatrix}
+\]
+\[
+B+C+A =\begin{bmatrix}
+  1    1 0 0 1 0\\
+1 1 0  0 1    0
+\end{bmatrix}
+\]
 
-\subsection*{3.}
+\subsection*{b}
+\[
+A =\begin{bmatrix}
+0 1 0\\
+ 0 1  
+\end{bmatrix}, 
+B = \begin{bmatrix}
+ 1\\
+1 0  
+\end{bmatrix},
+C = \begin{bmatrix}
+ 1 0\\
+1 0 1
+\end{bmatrix}
+\]
+In order to be able to finish a sequence one needs a piece where the shorter sequence matches the end of the longer one, eg in a) piece A has the shorter sequence "0" in the bottom row which matches the end of the upper sequence "010".\\
+The pieces given here have no such ending piece, hence no finite sequence can be found.
 
-\section*{Exercise 6: (Two proofs)}
+\subsection*{c}
+\[
+A =\begin{bmatrix}
+1\\
+1 0  
+\end{bmatrix}, 
+B = \begin{bmatrix}
+0\\
+1 0  
+\end{bmatrix},
+C = \begin{bmatrix}
+0 1 0\\
+0 1
+\end{bmatrix}
+D = \begin{bmatrix}
+1 1\\
+1
+\end{bmatrix}
+\]
+\[
+D+B =\begin{bmatrix}
+1 1  0\\
+ 1  1 0
+\end{bmatrix}
+\]
 
-\section*{Exercise 7: (CNF and DNF)}
 
-\section*{Exercise 8: (Switch and and or)}
+\subsection*{d}
+\[
+A =\begin{bmatrix}
+1 0\\
+1 0 1  
+\end{bmatrix}, 
+B = \begin{bmatrix}
+011\\
+1 1  
+\end{bmatrix},
+C = \begin{bmatrix}
+1 0 1\\
+0 1 1
+\end{bmatrix}
+\]
+It is also not possible to find a sequence here for a similar argument as given in b). The only piece we can finish a sequence with is B. If B is the last piece, the piece before last would have to have a zero as the last symbol in the bottom row to match the zero in the first row of B. No such piece is provided.
+
+\section*{Exercise 32: (Undecidable Problem II)}
 
 %ANARCHY
 \end{document}
