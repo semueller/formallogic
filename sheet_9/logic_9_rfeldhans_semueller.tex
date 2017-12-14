@@ -69,12 +69,22 @@ $ B_1 \cdot B_3 \cdot B_2 \cdot B_1 = Zeromatrix$
 
 \subsection*{c}
 
-% keine 0 möglich bis zu 14 iterationen
-
+From our classes in linear algebra we miraculously remember a useful property of determinants:\\
+given two matrices A and B it holds: \\
+\begin{center}
+	$det(A*B) = det(A) * det(B)$
+\end{center}
+If none of our given matrices' determinants equal zero we won't be able to produce a matrix whose determinant is zero, which also means we won't be able to produce the Zeromatrix.\\
+\begin{center}
+	$det(C_1) = -1$ \\
+	$det(C_2) = -1$ \\
+	$det(C_3) = 2$
+\end{center}
+Since no determinant is zero, this set of matrices is immortal.
 
 \section*{Exercise 36: (More Mortal Matrices)}
 
-We wrote a small python program (see attachments of the mail) to brute force our way to a solution, which was quite clever considering the solution is quite long:\\
+We wrote a small python program (see attachments of the mail) to brute force our way to a solution:\\
 
 $A \cdot B \cdot B \cdot A \cdot B \cdot A \cdot A \cdot B \cdot B \cdot B \cdot B \cdot A \cdot A \cdot A \cdot B \cdot B \cdot A = Zeromatrix$
 
