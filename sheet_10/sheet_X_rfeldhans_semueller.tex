@@ -51,25 +51,70 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \rhead{\today}
 
 
-\section*{Exercise 37:  (Laws of Logic)}
+\section*{Exercise 37:  (Violate the Peano axioms!)}
 
-\subsection*{1.}
+Standard model:
+$U_A = \N _0$\\
+$S(x) = x+1$\\
+$f(x,y) = x+y$\\
+$g(x,y) = x*y$\\
+Change model such that...\\
 
-\subsection*{2.}
+a)\\
+Satisfy all except $\forall x 0 \ne S(x)$:\\
+$U_A = \N_0 \cup \{-1\}$\\
 
-\subsection*{3.}
+b) \\
+Satisfy all except $\forall x \forall y S(x) = S(y) \Rightarrow x = y$:\\
+$U_A = \Z \setminus \{-1, 1\}$\\
+$S(n) = |n| + 1$\\
 
-\section*{Exercise 38: (Two proofs)}
+c)\\ % das hier duerfte falsch sein
+Satisfy all except $\forall x \forall y \ \ x*S(y) = f(g(x,y),x)$:\\
+$U_A = \Z \setminus \{-1,1\}$\\
+$f(x,y) = x + g(-1,y)$
+
+\section*{Exercise 38: (Consequences of Peano axioms)}
 
 \section*{Exercise 39: (Football experts)}
 
-Is it sufficient if we construct formulas or do we also need to give a structure to "prove" our formulas?\\
+%Is it sufficient if we construct formulas or do we also need to give a structure to "prove" our formulas?
+We construct a the structure $A=\{W, R, \alpha \}$ where\\ 
+$W = \{1, 2, ... , 34\}$ (days of play in Bundesliga this season. Current day of play is 11)\\
+$R$ the relation $<$ from ex. 40, here being interpretable as a timeline relation as $n<m =$ "n happened before m"\\ \\
+
+$\alpha : \{M, B, D\} \times W \rightarrow \{0,1\}$\\
+Results from matches on 22nd July 2017: $\alpha (M,1) = 0,\ \alpha (D,1) = 0,\ \alpha (B,1) = 0$\\
+$\alpha(B,n) =
+	\begin{cases}
+	1 &, n \geq 12 \\
+	1 &, \text{if Bremen won}, n < 12 \\
+	0 & , \text{otherwise(lost)}
+	\end{cases} \\
+\alpha(M,n) =
+	\begin{cases}
+		1 &, \text{Munich won on day n} \\
+		0 & , \text{otherwise(lost)}
+	\end{cases} \\
+\alpha(d,n) =
+	\begin{cases}
+	1 &, n > 12 \\
+	1 &, \text{if Dortmund won}, n < 12 \\
+	0 & , \text{otherwise(lost)}
+	\end{cases} \\
+$\\ \\
+Atomic Formulas: M = Munich wins, B = Bremen wins, D = Dortmund wins\\ \\
+a) B\\
+b) $\lnot D$\\
+c) $F = \diamond \lnot M \Rightarrow \lnot B$\\
+d) $\diamond M \Rightarrow D$\\
+e) $M \lor B \lor D$ \\ \\
 At least the last statement is wrong. On July 22nd 2017, Bayern lost against Mailand, Dortmund against Bochum and Bremen against St. Pauli. This violates statement e. \\
-wtf ich wette sogar das Dirk darauf hinaus wollte. Ich finde die Fussball echt langweilig.
+%wtf ich wette sogar das Dirk darauf hinaus wollte. Ich finde die Fussball echt langweilig.
 
-\section*{Exercise 40: (Switch and and or)}
+\section*{Exercise 40: (Frames)}
 
-Neither have we defined a way to evaluate multiple operators with a map, nor can I find any rule how to reduce $\diamond \diamond \diamond B$
+%Neither have we defined a way to evaluate multiple operators with a map, nor can I find any rule how to reduce $\diamond \diamond \diamond B$
 
 %ANARCHY
 \end{document}
