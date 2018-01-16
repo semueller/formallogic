@@ -20,6 +20,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{multicol}
+\usepackage{mathtools}
 %\usepackage{ngerman}
 \usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
 citecolor=blue, urlcolor=blue]{hyperref}
@@ -43,6 +44,10 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \newtheorem*{sol}{Solution}
 \newtheorem*{claim}{Claim}
 \newtheorem{problem}{Problem}
+
+\newcommand\parttwo{\stackrel{\mathclap{\normalfont\mbox{2}}}{=}}
+\newcommand\partthree{\stackrel{\mathclap{\normalfont\mbox{3}}}{=}}
+\newcommand\partsix{\stackrel{\mathclap{\normalfont\mbox{6}}}{=}}
 \begin{document}
  
 
@@ -72,14 +77,27 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \section*{Exercise 44: (Tautologies)}
 
 \subsection*{a}
+$\square F \Rightarrow \diamond F$\\
 
 \subsection*{b}
+$F \Rightarrow \diamond F$\\
 
 \subsection*{c}
+$\square F \Leftrightarrow \lnot \diamond \lnot F$\\\\
+$\parttwo \square F \Leftrightarrow \lnot \lnot \square F $\\
+Is a tauntology.
 
 \subsection*{d}
+$(\square F \land \square (F \Rightarrow G)) \Rightarrow \square G$\\\\
+$\partsix \square (F \land (F \Rightarrow G)) \Rightarrow \square G$\\\\
+$\partthree F \land (F \Rightarrow G) \Rightarrow G$\\
+Is not a tauntology.
 
 \subsection*{e}
+$\lnot (\square (F \Rightarrow G) \land \diamond F \land \square \lnot G)$\\\\
+$\partsix \lnot (\square ((F \Rightarrow G) \land \lnot G) \land \diamond F)$\\\\
+$\parttwo \lnot (\square ((F \Rightarrow G) \land \lnot G) \land \lnot \square \lnot F)$\\\\
+$\partsix \lnot (\square ((F \Rightarrow G) \land \lnot G \land F))$
 
 %ANARCHY
 \end{document}
