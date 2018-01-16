@@ -48,6 +48,7 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \newcommand\parttwo{\stackrel{\mathclap{\normalfont\mbox{2}}}{=}}
 \newcommand\partthree{\stackrel{\mathclap{\normalfont\mbox{3}}}{=}}
 \newcommand\partsix{\stackrel{\mathclap{\normalfont\mbox{6}}}{=}}
+\newcommand\partseven{\stackrel{\mathclap{\normalfont\mbox{7}}}{=}}
 \begin{document}
  
 
@@ -58,26 +59,42 @@ citecolor=blue, urlcolor=blue]{hyperref}
 
 \section*{Exercise 41: (Relations and directed graphs)}
 
-\subsection*{a}
+See Figure below
 
-\subsection*{b}
-
-\subsection*{c}
+\begin{figure}[ht]
+	\includegraphics[scale=0.1475]{../pics/41.jpeg}
+	\caption{Solution for Exercise 41}
+\end{figure}
 
 \section*{Exercise 42: (Rules)}
 
+See Figure below
+
+\begin{figure}[ht]
+	\includegraphics[scale=0.1475]{../pics/42.jpeg}
+	\caption{Solution for Exercise 42}
+\end{figure}
+
 \section*{Exercise 43: (More rules)}
 
-\subsection*{a}
+See Figure below
 
-\subsection*{b}
-
-\subsection*{c}
+\begin{figure}[ht]
+	\includegraphics[scale=0.25]{../pics/43a.jpeg}
+	\caption{Solution for Exercise 43}
+\end{figure}
 
 \section*{Exercise 44: (Tautologies)}
 
 \subsection*{a}
-$\square F \Rightarrow \diamond F$\\
+$\square F \Rightarrow \diamond F$\\\\
+$(\forall s,(s,t)\in W:(A(F,s)=1)) \Rightarrow (\exists s,(s,t) W:(A(F,s)=1))$\\\\
+$\lnot (\forall s,(s,t)\in W:(A(F,s)=1)) \lor (\exists s,(s,t) W:(A(F,s)=1)) $\\\\
+$ (\exists s,(s,t)\in W:(A(\lnot F,s)=1)) \lor (\exists (s,t) W:(A(F,s)=1)) $\\\\
+$(A(\diamond \lnot F, s)=1) \lor (A(\diamond F,s)=1)$\\\\
+$\diamond \lnot F \lor \diamond F$\\\\
+$\partseven \diamond (F \lor \lnot F) $\\
+Is a tauntology.
 
 \subsection*{b}
 $F \Rightarrow \diamond F$\\
